@@ -1,0 +1,103 @@
+@charset " UFT-8";
+/* import url(); para trazer fontes diferente da internet . fonte-face para trazer fonte que estao no meu computador*/
+* {
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*:root (com a cor comeco --cor0 , cor01 e assim sucessivamente) ajuda para colocar no restante do codigo , quando vc ja tem uma lista de cores*/
+
+body{
+     background-color: bisque;
+}
+
+p{
+    margin: 15px 0px;
+}
+
+header{ /*unica configuração que coloquei aqui foi o background*/
+    min-height: 150px;
+    padding-top: 40px;
+    background-image: linear-gradient(to bottom , rgba(2, 126, 2, 0.836) , rgba(0, 0, 0, 0.897));
+}
+
+header  h1{ /*alem do color coloquei o text-align*/
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.521);
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.932);
+  
+}
+
+header  p {
+    color: rgba(255, 255, 255, 0.877);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.521);
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 600px;
+    padding: 10px;
+    margin: auto;
+    
+}
+
+nav {
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.363);
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition-duration: 0.5s;
+}
+
+nav a:hover{
+    background-color: rgba(0, 128, 0, 0.589);
+    color: rgba(117, 255, 117, 0.795);
+    
+}
+
+main{ /* grande parte eu coloquei na div e nao no main que seria o corpo*/ 
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.363);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+main p{
+    text-indent: 30px; /*ele tira um pouco do texto que esta no canto da tela*/
+    line-height: 2em;
+}
+
+main h2 { /*aqui poderia em vez de colocar white colocaria transparent*/ 
+    background-image: linear-gradient(to right , rgba(56, 192, 56, 0.836) , white);
+}
+
+div.video{
+    background-color: green;
+    margin: 0px -20px 30px -20px;
+    padding:  20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+footer{
+    text-align: center ;
+}
