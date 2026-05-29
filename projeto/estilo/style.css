@@ -1,12 +1,19 @@
 @charset "UTF-8"
 
+:root{
+    --fonte1: Verdana , Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion one', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
 *{
     margin: 0px;
     padding: 0px;
+   
 }
 
 /*vh Viewport */
 html, body {
+    font-family: var(--fonte1);
     margin: 0px;
     min-height: 100vh;
     background-color: darkgray;
@@ -20,6 +27,7 @@ header {
 }
 
 header > h1 {
+    font-family: var(--fonte2);
     padding-top: 50px;
     /*text-transform: uppercase;*/
     font-variant: small-caps;
@@ -45,6 +53,7 @@ section{
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
 }
 
 section.normal{
