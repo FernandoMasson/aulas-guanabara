@@ -1,36 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeira Tabela</title>
 </head>
 <style>
-    body{
+    body {
         background-color: bisque;
     }
 
-    table{
-        width: 300px;
-        height: 300px;
-        border-collapse: collapse;/*ajunta as linhas da tabela*/
+    table {
+        width: 500px;
+        border-collapse: collapse;
+        /*ajunta as linhas da tabela*/
     }
 
-    tr.linha{
+
+    .platina {
+        background-color: aquamarine;
+    }
+
+    .branco {
+        background-color: rgb(167, 161, 161);
+    }
+
+    tr.linha {
         background-color: aqua;
     }
 
-    td{
+    td,
+    th {
         border: 1px solid black;
-        padding: 5px;
-        text-align: center;  /*horizontal*/
-        vertical-align: bottom;  /*vertical*/
+        padding: 10px;
+        text-align: center;
+        /*horizontal*/
+        vertical-align: middle;
+        /*vertical*/
     }
 
-    td.dado{
+    td.dado {
         background-color: blueviolet;
     }
+
+    caption {
+        font-size: 1.3em;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+
+    /*tr > td:nth-child(2n){
+        background-color: black;
+    }*/
 </style>
+
 <body>
     <H1>Primeira Tabela</H1>
 
@@ -46,29 +71,137 @@
             tr,td,th
         <tfoot>
             tr,td,th
+
+    Em uma tabela de População
+            no cabeçalho thead - logo a baixo como cabeçalho colocar o th scope="col" - e no rodapé em vez de colocar o col , colocar o row
+
+            para um cor pegar em algumas linhas usar tbody > tr:nth-child(2n) efeito zebrado - odd e even (par e impar)
+
+            position sticky ele permanece o top da tabela como estado e população
+
+            rowspan="" - ele pega a coluna 
+            colspan="" - ele pega a linha
+            ele substitui a outra letra que esta faltando
+
+            rowgroup quer dizer que na coluna a frente tem mais de uma linha . se eu so colocar row ele pega somente o primeiro nome.
+            colgroup ele visualiza que a linha embaixo dele tem mais que uma nome , se nao colocar isso ele vai pegar somente o primeiro nome 
     -->
 
-    <table>
-        <tr class="linha">
-            <td>A1</td>
-            <td>B1</td>
-            <td>C1</td>
+    <table class="platina">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td rowspan="2">3</td>
+            <td>4</td>
         </tr>
         <tr>
-            <td>A2</td>
-            <td>B2</td>
-            <td>B3</td>
+            <td>5</td>
+            <td>6</td>
+
+            <td>7</td>
         </tr>
         <tr>
-            <td class="dado">A3</td>
-            <td>B3</td>
-            <td>C3</td>
+            <td colspan="3">8</td>
+            <td>9</td>
         </tr>
         <tr>
-            <td>A4</td>
-            <td>B4</td>
-            <td>C4</td>
+            <td rowspan="2">10</td>
+            <td colspan="2">11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
         </tr>
     </table>
+    <p></p>
+    <table class="branco">
+        <tr>
+            <td colspan="4">A</td>
+            <td rowspan="4">B</td>
+        </tr>
+        <tr>
+            <td rowspan="5">C</td>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+
+        </tr>
+        <tr>
+            <td>G</td>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>J</td>
+            <td>L</td>
+            <td>M</td>
+        </tr>
+        <tr>
+            <td colspan="4">N</td>
+        </tr>
+    </table>
+    <p></p>
+    <table>
+        <caption>Filmes Favoritos</caption>
+        <thead>
+            <th scope="col">Grupo</th>
+            <th scope="col">Nomes</th>
+            <th colspan="3" scope="colgroup">Filmes</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Mulher</th>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Beatriz Souza</td>
+                <td>Hulk</td>
+                <td>Inception</td>
+                <td>Batman</td>
+            </tr>
+            <tr>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="rowgroup">Homens</th>
+                <td>Bruno Mendoça</td>
+                <td>Intocáveis</td>
+                <td>Amnésia</td>
+                <td>Gladiador</td>
+            </tr>
+            <tr>
+                <td>Daniel Loureço</td>
+                <td>Wall-E</td>
+                <td>Oldboy</td>
+                <td>DAngal</td>
+            </tr>
+            <tr>
+                <td>Fabiano Mota</td>
+                <td>Star Wars 5</td>
+                <td>Taxi Driver</td>
+                <td>Toy Story</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="row"> Total</th>
+                <td>1000</td>
+            </tr>
+        </tfoot>
+    </table>
+    <p></p>
+    <table>
+
+    </table>
+   
 </body>
+
 </html>
