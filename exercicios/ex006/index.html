@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<style>
+    body{
+        background-color: darkgray;
+    }
+</style>
+<body>
+    <!--
+        Criação de formulario action: uma ação quando clicar pra enviar o formulario.
+        Label , ele vincula o nome com a caixa que esta na frente dele.
+        Quando se manda em enviar o formulario , ele aparece na parte de cima o nom e sobrenome , colocando o POST ele some da barra url, se deixar o padrao seria o Get.
+        mas ainda sim da pra verificar em inspecionar. 
+    -->
+    <h1>Formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text"  name="Nome" id="nome">
+        </p>
+        <p>
+            <label for="sobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="sobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>
