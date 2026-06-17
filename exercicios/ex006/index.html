@@ -13,22 +13,57 @@
 <body>
     <!--
         Criação de formulario action: uma ação quando clicar pra enviar o formulario.
-        Label , ele vincula o nome com a caixa que esta na frente dele.
+        Label , ele vincula o NAME com a caixa que esta na frente dele, bom para PHP, HTML e o ID é bom pro label e javaScript .
         Quando se manda em enviar o formulario , ele aparece na parte de cima o nom e sobrenome , colocando o POST ele some da barra url, se deixar o padrao seria o Get.
         mas ainda sim da pra verificar em inspecionar. 
+        REQUIRED - ele deixa o campo obrigatório , nao deixa o usuario mandar o formulario vazio, ele vai dentro do INPUT.
+        Usando dentro de INPUT 
+        MINLENGTH - minimo de letras, dentro do campo. Tem que colocar o numero que vc quer.
+        MAXLENGTH - maximo de letras , dentro do campo. Tem que colocar o numero que vc quer.
+        PLACEHOLDER - ele mostra o nome dentro do campo .
+        AUTOCOMPLETE - dentro do input voce coloca o que significa aquele campo , tipo nome , name . senha , new password ou current-passaword.
+        STEP - voce pode subir a nota da media de 0.5 ou de 0.1 depende da nota.
+
+        Estudar mais sobre RegEx - Expressões regulares
+
+        fieldset - grupo de campos , colocando ele depois do form.
+        legend - como se fosse o texto do quadrado
+
+        para o telefone tem um codigo apos estudar RegEx - "^\(\d{2}\)\d{4,5}-\d{4}$" isso aqwui informa o numero de telefone (11)9 9999-9999 .
     -->
     <h1>Formulario</h1>
     <form action="cadastro.php" method="post" autocomplete="off">
-        <p>
-            <label for="nome">Nome:</label>
-            <input type="text"  name="Nome" id="nome">
-        </p>
-        <p>
-            <label for="sobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="sobrenome">
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
-        </p>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text"  name="Nome" id="inome" required minlength="5" maxlength="10" placeholder="digite seu nome aqui...." autocomplete="current-password">
+            </p>
+            <p>
+                <label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome" placeholder="DIgite sua Senha ....">
+            </p>
+            <p>
+                <label for="imedia">Média:</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required>
+            </p>
+            <p>
+                <label for="mes">Perido Letivo</label>
+                <input type="month" name="mes" id="mes">
+            </p>
+            <p>
+                <label for="dia">Dia da Prova</label>
+                <input type="date" name="dia" id="dia">
+            </p>
+            <p>
+                <label for="hora">Hora</label>
+                <input type="time" name="hora" id="hora">
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </fieldset>
     </form>
 </body>
 </html>
