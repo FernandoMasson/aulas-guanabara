@@ -13,15 +13,23 @@
 <body>
     <!--
         Criação de formulario action: uma ação quando clicar pra enviar o formulario.
+
         Label , ele vincula o NAME com a caixa que esta na frente dele, bom para PHP, HTML e o ID é bom pro label e javaScript .
+
         Quando se manda em enviar o formulario , ele aparece na parte de cima o nom e sobrenome , colocando o POST ele some da barra url, se deixar o padrao seria o Get.
         mas ainda sim da pra verificar em inspecionar. 
+
         REQUIRED - ele deixa o campo obrigatório , nao deixa o usuario mandar o formulario vazio, ele vai dentro do INPUT.
         Usando dentro de INPUT 
+        
         MINLENGTH - minimo de letras, dentro do campo. Tem que colocar o numero que vc quer.
+
         MAXLENGTH - maximo de letras , dentro do campo. Tem que colocar o numero que vc quer.
+
         PLACEHOLDER - ele mostra o nome dentro do campo .
+
         AUTOCOMPLETE - dentro do input voce coloca o que significa aquele campo , tipo nome , name . senha , new password ou current-passaword.
+
         STEP - voce pode subir a nota da media de 0.5 ou de 0.1 depende da nota.
 
         Estudar mais sobre RegEx - Expressões regulares
@@ -63,6 +71,24 @@
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
             </p>
+        </fieldset>
+        <fieldset>
+            <legend> Sexo </legend>
+            <!-- dentro do radio o NAME tem que ser igual , se for diferente ele ira marcar as duas caixas e com isso nao deixar voce mudar -->
+                <input type="radio" name="sexo" id="isxmas">
+                <label for="isxmas">Masculino</label><br>
+                <input type="radio" name="sexo" id="isxfem">
+                <label for="isxfem">Feminino</label><br>
+                
+        </fieldset>
+        <fieldset>
+            <legend>Esportes</legend>
+            <!--da pra ver perfeito como o label ajuda na seleção da caixa, clicando encima do nom ele ja marca a caixa em que vc esta ... sem o label voce precisa clicar encima do quadrado-->
+                <input type="checkbox" name="esfut" id="esfut"><label for="esfut">Futebol</label><br>
+                <input type="checkbox" name="esbas" id="esbas"><label for="esbas">Basquete</label><br>
+                <input type="checkbox" name="esnat" id="esnat"><label for="esnat">Natação</label><br>
+                <input type="checkbox" name="esten" id="esten"><label for="esten">Tênis</label><br>
+                
         </fieldset>
     </form>
 </body>
