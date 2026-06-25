@@ -9,7 +9,9 @@
     body{
         background-color: darkgray;
     }
+    
 </style>
+
 <body>
     <!--
         Criação de formulario action: uma ação quando clicar pra enviar o formulario.
@@ -37,7 +39,7 @@
         fieldset - grupo de campos , colocando ele depois do form.
         legend - como se fosse o texto do quadrado
 
-        para o telefone tem um codigo apos estudar RegEx - "^\(\d{2}\)\d{4,5}-\d{4}$" isso aqwui informa o numero de telefone (11)9 9999-9999 .
+        para o telefone tem um codigo apos estudar RegEx - "^\(\d{2}\)\d{4,5}-\d{4}$" isso aqui informa o numero de telefone (11)9 9999-9999 .
     -->
     <h1>Formulario</h1>
     <form action="cadastro.php" method="post" autocomplete="off">
@@ -90,6 +92,34 @@
                 <input type="checkbox" name="esten" id="esten"><label for="esten">Tênis</label><br>
                 
         </fieldset>
+        <fieldset>
+            <legend>Cor , Nivel</legend>
+            <label for="icor">Cor:</label>
+            <input type="color" name="cor" id="icor"><br>
+
+            <label for="inivel">Nivel:</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="100" step="20" list="numeros" ><br>
+
+            <label for="ifoto">Imagem:</label>
+            <input type="file" name="foto" id="ifoto"><br>
+            <!--sempre quando utilizar o File tem que colocar em modo POST , pq uma imagem passa mais de 3 mil bit. onde o metodo Get chega-->
+            <div class="container">
+            <span id="valor">5</span>
+            <input type="range" id="nota" min="0" max="10" value="5">
+            </div>
+            
+        </fieldset>
     </form>
 </body>
+<script>//somente um teste, javascript
+const range = document.getElementById("nota");
+const valor = document.getElementById("valor");
+
+function atualizar() {
+    valor.textContent = range.value;
+}
+
+range.addEventListener("input", atualizar);
+atualizar();
+</script>
 </html>
